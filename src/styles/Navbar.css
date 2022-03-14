@@ -1,0 +1,66 @@
+.navbar-container{
+    position: relative;
+    height: 80px;
+    width: 100vw;
+    background-color: rgb(5, 11, 15);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.navbar-logo{
+    position: relative;
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.navbar-logo > a >img{
+    position: relative;
+    height: 50px;
+    border-radius: 10%;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: all 0.2s ease-in-out;
+}
+.navbar-logo > a >img:hover{
+    transform: scale(1.2);
+}
+
+.navbar-label{
+    position: relative;
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-cart{
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.navbar-cart >a>img{
+    height: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition:all 0.2s ease-in-out;
+}
+.navbar-cart >a>img:hover{
+    transform: scale(1.2);
+}
+
+.navbar-cart >a>.cart-quantity-wrapper{
+    position: absolute;
+    top: -15px;
+    right: 5px;
+    height: 25px;
+    width: 25px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 50%;
+}
