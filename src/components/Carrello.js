@@ -24,7 +24,7 @@ const Carrello = () => {
                                 Nome
                             </th>
                             <th>
-                                Descrizione
+                                Quantita'
                             </th>
                             <th>
                                 Prezzo
@@ -44,7 +44,7 @@ const Carrello = () => {
                                    {prodotto.prodotti_name}
                                </td>
                                <td>
-                                   {prodotto.prodotti_desc}
+                                   {prodotto.prodotti_quantity}
                                </td>
                                <td>
                                    {prodotto.prodotti_price}
@@ -118,7 +118,7 @@ const ItemLeft = styled.div`
 const ItemRight = styled.div`
     position:relative;
     height:100%;
-    width:40%;
+    width:30%;
     color:white;
     background-image: linear-gradient(to right, #0f0f11ea, transparent);
 
