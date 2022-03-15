@@ -99,9 +99,9 @@ const ItemLeft = styled.div`
         height:100%;
         
         tbody{
-            // tr{
+            img{
                 height:200px;
-            // }
+            }
         }
     }
 
