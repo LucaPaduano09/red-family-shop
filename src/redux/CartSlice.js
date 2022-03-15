@@ -33,15 +33,27 @@ const cartSlice = createSlice({
           }
         },
         removeFromCart(state,action){
-            let filtrato = state.products.filter((value)=> {return value._id != action.payload._id});
-            // console.log(filtrato);
-            state.products = filtrato;
-            console.log(filtrato.prodotti_price)
-            state.total -= action.payload.prodotti_price * action.payload.prodotti_quantity;
-            console.log(state.products)
-            state.quantity -= action.payload.prodotti_quantity;
-        }
-        
+            state.products.forEach(element => {
+                if(element._id === action.payload._id){
+                    console.log(element.prodotti_quantity)
+                    element.prodotti_quantity -= 1;
+                    state.quantity -= 1;
+                    state.total -= action.payload.prodotti_price;
+                    if(state.quantity === 0){
+                        let filtrato = state.products.filter((value)=> {return value._id != action.payload._id});
+                        console.log(filtrato);
+                        state.products = filtrato;
+                    }
+                }else{
+                    let filtrato = state.products.filter((value)=> {return value._id != action.payload._id});
+                    console.log(filtrato);
+                    state.products = filtrato;
+                    state.total -= action.payload.prodotti_price * action.payload.prodotti_quantity;
+                    console.log(state.products)
+                    state.quantity -= action.payload.prodotti_quantity;
+                }
+            })
+        },     
     }
 })
 

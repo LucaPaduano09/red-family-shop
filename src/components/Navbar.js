@@ -9,12 +9,14 @@ const Navbar = () => {
   return (
     <div className="navbar-container">
       <div className="navbar-logo">
-        <Link to={"/"}>
-          <img src="../images/redd.png" />
-        </Link>
+        <a href={"https://red-family.netlify.app"}>
+          <img src="./images/redd.png" />
+        </a>
       </div>
       <div className="navbar-label">
+        <Link to={"/"}>
         <h1>RED FAMILY SHOP</h1>
+        </Link>
       </div>
       <div className="navbar-cart">
         <Link to={"/carrello"}>
